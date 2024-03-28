@@ -5,7 +5,6 @@ void main() {
 }
 
 class pointsCounter extends StatefulWidget {
-   
   @override
   State<pointsCounter> createState() => _pointsCounterState();
 }
@@ -35,7 +34,6 @@ class _pointsCounterState extends State<pointsCounter> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                
                 children: [
                   Column(
                     children: [
@@ -51,9 +49,9 @@ class _pointsCounterState extends State<pointsCounter> {
                         padding: EdgeInsets.only(bottom: 10),
                         child: ElevatedButton(
                           onPressed: () {
-                           setState(() {
-                             teamAPoints++;
-                           }); 
+                            setState(() {
+                              teamAPoints++;
+                            });
                           },
                           child: Text(
                             "add 1 point ",
@@ -69,9 +67,9 @@ class _pointsCounterState extends State<pointsCounter> {
                         padding: EdgeInsets.only(bottom: 10),
                         child: ElevatedButton(
                           onPressed: () {
-                           setState(() {
-                              teamAPoints+=2;
-                           });
+                            setState(() {
+                              teamAPoints += 2;
+                            });
                           },
                           child: Text(
                             "add 2 points",
@@ -86,7 +84,7 @@ class _pointsCounterState extends State<pointsCounter> {
                       ElevatedButton(
                         onPressed: () {
                           setState(() {
-                            teamAPoints+=3;
+                            teamAPoints += 3;
                           });
                         },
                         child: Text(
@@ -120,9 +118,9 @@ class _pointsCounterState extends State<pointsCounter> {
                         padding: EdgeInsets.only(bottom: 10),
                         child: ElevatedButton(
                           onPressed: () {
-                           setState(() {
+                            setState(() {
                               teamBPoints++;
-                           });
+                            });
                           },
                           child: Text(
                             "add 1 point ",
@@ -139,7 +137,7 @@ class _pointsCounterState extends State<pointsCounter> {
                         child: ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              teamBPoints+=2;
+                              teamBPoints += 2;
                             });
                           },
                           child: Text(
@@ -155,7 +153,7 @@ class _pointsCounterState extends State<pointsCounter> {
                       ElevatedButton(
                         onPressed: () {
                           setState(() {
-                            teamBPoints+=3;
+                            teamBPoints += 3;
                           });
                         },
                         child: Text(
@@ -171,23 +169,25 @@ class _pointsCounterState extends State<pointsCounter> {
                   ),
                 ],
               ),
-              SizedBox(height: 100,),
+              SizedBox(
+                height: 100,
+              ),
               ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            teamAPoints =0;
-                            teamBPoints =0;
-                          });
-                        },
-                        child: Text(
-                          "reset",
-                          style: TextStyle(color: Colors.black),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange,
-                          fixedSize: Size(160, 50),
-                        ),
-                      ),
+                onPressed: () {
+                  setState(() {
+                    teamAPoints = 0;
+                    teamBPoints = 0;
+                  });
+                },
+                child: Text(
+                  "reset",
+                  style: TextStyle(color: Colors.black),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  fixedSize: Size(160, 50),
+                ),
+              ),
             ],
           ),
         ));
